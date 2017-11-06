@@ -25,6 +25,11 @@ class Player extends Model
     private $game_id;
 
     /**
+     * @var int
+     */
+    private $position_id;
+
+    /**
      * @return int|null
      */
     public function getPlayerId(): ?int
@@ -70,5 +75,21 @@ class Player extends Model
     public function setGameId(int $game_id)
     {
         $this->game_id = $game_id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPositionId(): int
+    {
+        return $this->position_id;
+    }
+
+    /**
+     * @param int $position_id
+     */
+    public function setPositionId(int $position_id)
+    {
+        $this->position_id = $position_id;
     }
 }
