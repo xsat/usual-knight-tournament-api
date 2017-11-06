@@ -30,6 +30,11 @@ class Turn extends Model
     private $action_id;
 
     /**
+     * @var int
+     */
+    private $position_id;
+
+    /**
      * @var string
      */
     private $added_date;
@@ -96,6 +101,22 @@ class Turn extends Model
     public function setActionId(int $action_id)
     {
         $this->action_id = $action_id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPositionId(): int
+    {
+        return $this->position_id;
+    }
+
+    /**
+     * @param int $position_id
+     */
+    public function setPositionId(int $position_id)
+    {
+        $this->position_id = $position_id;
     }
 
     /**
